@@ -1,0 +1,8 @@
+# php-015-sofn-site-administravel
+
+# Anotações:
+- Usar "require" ou "include".
+    require - quando ocorre um erro o php para.
+    inclue - quando ocorre um erro o php continua.
+- Rodar o servidor php.
+    php -S localhost:1337 -t public/
