@@ -2,6 +2,8 @@
 
 function setIntervalServerError($errno, $errstr, $errfile, $errline)
 {
+    http_response_code(500);
+
     echo "<h1>Error</h1>";
 
     if (!DEBUG) {
