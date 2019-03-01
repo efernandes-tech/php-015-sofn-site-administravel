@@ -3,8 +3,8 @@
 mysqli_report(MYSQLI_REPORT_ERROR);
 
 $conn = new mysqli(
-    'localhost',
-    'root',
-    '',
-    'php-015-sofn-site-administravel'
+    DB_SERVER,
+    DB_USER,
+    DB_PASSWD,
+    DB_NAME
 );
