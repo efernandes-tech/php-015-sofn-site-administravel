@@ -3,7 +3,7 @@
 <form action="" method="POST">
     <div class="form-group">
         <label for="pagesTitle">Título</label>
-        <input name="title" id="pagesTitle" type="text"
+        <input type="text" name="title" id="pagesTitle" required
             class="form-control" placeholder="Aqui vai o título da página...">
     </div>
 
@@ -13,13 +13,14 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">/</span>
             </div>
-            <input name="url" id="pagesUrl" type="text"
+            <input type="text" name="url" id="pagesUrl"
                 class="form-control" placeholder="URL amigável, deixe em branco para informar a página inicial...">
         </div>
     </div>
 
-    <div class="form-grout">
-        // editor de texto
+    <div class="form-group">
+        <input type="hidden" name="body" id="pagesBody">
+        <trix-editor input="pagesBody"></trix-editor>
     </div>
 
     <button type="submit" class="btn btn-primary">Salvar</button>

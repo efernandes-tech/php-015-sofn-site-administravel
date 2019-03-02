@@ -6,3 +6,5 @@
     inclue - quando ocorre um erro o php continua.
 - Rodar o servidor php.
     php -S localhost:1337 -t public/
+- Editor de texto pratico.
+    https://trix-editor.org/
