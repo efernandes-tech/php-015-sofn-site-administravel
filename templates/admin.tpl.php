@@ -25,7 +25,7 @@
                         <span class="nav-link text-white-50"><small>Menu</small></span>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link active">Páginas</a>
+                        <a href="/admin/pages" class="nav-link active">Páginas</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">Usuários</a>
