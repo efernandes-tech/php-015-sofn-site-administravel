@@ -8,3 +8,5 @@
     php -S localhost:1337 -t public/
 - Editor de texto pratico.
     https://trix-editor.org/
+- Biblioteca para estilizar mensagens de notificação.
+    https://sciactive.com/pnotify/
