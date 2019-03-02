@@ -1,0 +1,4 @@
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /php-015-sofn-site-administravel/public/$1 [L]
