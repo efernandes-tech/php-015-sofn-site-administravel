@@ -20,8 +20,13 @@ $pages_all = function() use ($conn) {
     return $result->fetch_all(MYSQLI_ASSOC);
 };
 
-$pages_one = function($id) {
-    // buscar uma página.
+$pages_one = function($id) use ($conn) {
+    $sql = "SELECT * FROM pages WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_assoc();
 };
 
 $pages_create = function()  use ($conn) {
