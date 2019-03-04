@@ -48,4 +48,12 @@ $users_edit = function($id) use ($conn) {
 };
 
 $users_delete = function($id) use ($conn) {
+    $sql = "DELETE FROM users WHERE id=?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id);
+
+    flash('Removeu registro com sucesso!', 'success');
+
+    return $stmt->execute();
 };

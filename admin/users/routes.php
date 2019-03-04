@@ -26,6 +26,7 @@ if (resolve('/admin/users')) {
 
 } else if ($params = resolve('/admin/users/(\d+)/delete')) {
 
+    $users_delete($params[1]);
     header('location: /admin/users');
     die();
 
