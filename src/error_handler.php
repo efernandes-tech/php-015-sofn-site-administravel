@@ -1,6 +1,6 @@
 <?php
 
-function setIntervalServerError($errno, $errstr, $errfile, $errline)
+function setIntervalServerError($errno = null, $errstr = null, $errfile = null, $errline = null)
 {
     http_response_code(500);
 
@@ -8,6 +8,14 @@ function setIntervalServerError($errno, $errstr, $errfile, $errline)
 
     if (!DEBUG) {
         exit;
+    }
+
+    if (is_object($errno)) {
+        $err = $errno;
+        $errno = $err->getCode();
+        $errstr = $err->getMessage();
+        $errfile = $err->getFile();
+        $errline = $err->getLine();
     }
 
     echo '<span style="font-weigth: bold; color: red;">';
@@ -24,6 +32,7 @@ function setIntervalServerError($errno, $errstr, $errfile, $errline)
             break;
         default:
             echo "Unknow error type: [".$errno."] ".$errstr."<br>\n";
+            echo "On line ".$errline." in file ".$errfile;
             break;
     }
     echo "</span>";

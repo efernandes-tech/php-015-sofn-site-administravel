@@ -9,18 +9,20 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                teste@teste.com
-            </td>
-            <td class="text-right">
-                <a href="/admin/users/1"
-                    class="btn btn-primary btn-sm">Ver</a>
-            </td>
-        </tr>
+        <?php foreach ($data['users'] as $user): ?>
+            <tr>
+                <td>
+                    <?php echo $user['id'] ?>
+                </td>
+                <td>
+                    <?php echo $user['email'] ?>
+                </td>
+                <td class="text-right">
+                    <a href="/admin/users/<?php echo $user['id'] ?>"
+                        class="btn btn-primary btn-sm">Ver</a>
+                </td>
+            </tr>
+        <?php endforeach ?>
     </tbody>
 </table>
 
