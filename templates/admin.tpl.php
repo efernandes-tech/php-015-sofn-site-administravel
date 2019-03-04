@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/trix/trix.css">
     <link rel="stylesheet" href="/resources/pnotify/pnotify.custom.min.css">
@@ -14,7 +15,7 @@
 <body class="d-flex flex-column">
     <div id="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a href="" class="navbar-brand">Admin</a>
+            <a href="/admin" class="navbar-brand">Admin</a>
             <span class="navbar-text">Painel Administrativo</span>
         </nav>
     </div>
@@ -26,10 +27,16 @@
                         <span class="nav-link text-white-50"><small>Menu</small></span>
                     </li>
                     <li class="nav-item">
-                        <a href="/admin/pages" class="nav-link active">Páginas</a>
+                        <a href="/admin/pages" class="nav-link <?php echo (resolve('/admin/pages.*') ? 'active' : ''); ?>">
+                            <i class="fas fa-file-alt"></i>
+                            Páginas
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/admin/users" class="nav-link">Usuários</a>
+                        <a href="/admin/users" class="nav-link <?php echo (resolve('/admin/users.*') ? 'active' : ''); ?>">
+                            <i class="far fa-user"></i>
+                            Usuários
+                        </a>
                     </li>
                 </ul>
             </div>

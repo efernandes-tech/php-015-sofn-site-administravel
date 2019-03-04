@@ -10,3 +10,5 @@
     https://trix-editor.org/
 - Biblioteca para estilizar mensagens de notificação.
     https://sciactive.com/pnotify/
+- Icones.
+    https://fontawesome.com/

@@ -19,7 +19,7 @@
     </div>
 
     <div class="form-group">
-        <input type="hidden" name="body" id="pagesBody" value="<?php echo $data['page']['body'] ?>">
+        <input type="hidden" name="body" id="pagesBody" value="<?php echo htmlentities($data['page']['body']) ?>">
         <trix-editor input="pagesBody"></trix-editor>
     </div>
 
