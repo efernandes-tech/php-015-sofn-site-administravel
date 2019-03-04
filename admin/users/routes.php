@@ -23,6 +23,11 @@ if (resolve('/admin/users')) {
 
 } else if ($params = resolve('/admin/users/(\d+)/edit')) {
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $users_edit($params[1]);
+        header('location: /admin/users/'.$params[1]);
+        die();
+    }
     $user = $users_one($params[1]);
     render('admin/users/edit', 'admin', ['user' => $user]);
 

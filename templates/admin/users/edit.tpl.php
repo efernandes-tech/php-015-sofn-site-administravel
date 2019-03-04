@@ -9,7 +9,7 @@
 
     <div class="form-group">
         <label for="usersSenha">Senha</label>
-        <input type="password" name="password" id="usersSenha" required
+        <input type="password" name="password" id="usersSenha"
             class="form-control" placeholder="Sua senha...">
     </div>
 
