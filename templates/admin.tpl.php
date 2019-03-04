@@ -55,7 +55,7 @@
             form.append('file', attachment.file);
 
             $.ajax({
-                url: 'admin/upload/image',
+                url: '/admin/upload/image',
                 method: 'POST',
                 data: form,
                 contentType: false,
@@ -69,8 +69,12 @@
                     return xhr;
                 }
             })
-            .done(function() {
-                console.log("success");
+            .done(function(response) {
+                console.log("success", response);
+                attachment.setAttributes({
+                    url: response,
+                    href: response
+                })
             })
             .fail(function() {
                 console.log("error");
