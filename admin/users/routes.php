@@ -9,6 +9,11 @@ if (resolve('/admin/users')) {
 
 } else if (resolve('/admin/users/create')) {
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $users_create();
+        header('location: /admin/users');
+        die();
+    }
     render('admin/users/create', 'admin');
 
 } else if ($params = resolve('/admin/users/(\d+)')) {
