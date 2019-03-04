@@ -12,4 +12,6 @@ if (resolve('/admin/auth/login')) {
         flash('Dados inválido', 'error');
     }
     render('admin/auth/login', 'admin/login');
+} elseif (resolve('/admin/auth/logout')) {
+    logout();
 }
