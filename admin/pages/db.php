@@ -29,7 +29,7 @@ $pages_one = function($id) use ($conn) {
     return $result->fetch_assoc();
 };
 
-$pages_create = function()  use ($conn) {
+$pages_create = function() use ($conn) {
     $data = pages_get_data('/admin/pages/create');
 
     $sql = "INSERT INTO pages (title, url, body, created, updated)
@@ -43,9 +43,19 @@ $pages_create = function()  use ($conn) {
     return $stmt->execute();
 };
 
-$pages_edit = function($id) {
-    // atualiza uma página.
+$pages_edit = function($id) use ($conn) {
+    $data = pages_get_data('/admin/pages/'.$id.'/edit');
+
+    $sql = "UPDATE pages SET
+        title = ?, url = ?, body = ?, updated = NOW()
+        WHERE id = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('sssi', $data['title'], $data['url'], $data['body'], $id);
+
     flash('Atualizou registro com sucesso!', 'success');
+
+    return $stmt->execute();
 };
 
 $pages_delete = function($id) {
