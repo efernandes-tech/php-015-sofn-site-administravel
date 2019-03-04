@@ -18,11 +18,13 @@ if (resolve('/admin/users')) {
 
 } else if ($params = resolve('/admin/users/(\d+)')) {
 
-    render('admin/users/view', 'admin');
+    $user = $users_one($params[1]);
+    render('admin/users/view', 'admin', ['user' => $user]);
 
 } else if ($params = resolve('/admin/users/(\d+)/edit')) {
 
-    render('admin/users/edit', 'admin');
+    $user = $users_one($params[1]);
+    render('admin/users/edit', 'admin', ['user' => $user]);
 
 } else if ($params = resolve('/admin/users/(\d+)/delete')) {
 

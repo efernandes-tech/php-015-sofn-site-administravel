@@ -20,6 +20,12 @@ $users_all = function() use ($conn) {
 };
 
 $users_one = function($id) use ($conn) {
+    $sql = "SELECT * FROM users WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_assoc();
 };
 
 $users_create = function() use ($conn) {
