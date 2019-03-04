@@ -6,6 +6,8 @@ if (resolve('/admin')) {
     include __DIR__ . '/pages/routes.php';
 } else if (resolve('/admin/users.*')) {
     include __DIR__ . '/users/routes.php';
+} else if (resolve('/admin/upload/image')) {
+    echo "ok";
 } else {
     http_response_code(404);
     echo "Página não encontrada!";
