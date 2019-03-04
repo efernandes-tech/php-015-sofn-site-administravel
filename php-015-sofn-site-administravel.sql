@@ -19,7 +19,11 @@ CREATE TABLE IF NOT EXISTS `pages` (
   `created` datetime NOT NULL,
   `updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+INSERT INTO `pages` (`id`, `title`, `url`, `body`, `created`, `updated`) VALUES
+(1, 'titulo', 'url', 'body', '2019-03-03 19:00:20', '2019-03-03 19:00:20'),
+(2, 'Sobre NÃ³s', 'sobre-nos', '<h1>teste</h1>', '2019-03-03 19:18:03', '2019-03-03 19:18:03');
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
