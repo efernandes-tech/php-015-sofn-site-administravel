@@ -16,3 +16,4 @@
     heroku login
     heroku git:remote -a php-015-sofn-site-admin
     git push heroku master
+    http://php-015-sofn-site-admin.herokuapp.com/
