@@ -1,0 +1,10 @@
+{
+    "name": "edersonlrf/php-015-sofn-site-administravel",
+    "authors": [
+        {
+            "name": "Éderson Fernandes",
+            "email": "edersonluis.rf@gmail.com"
+        }
+    ],
+    "require": {}
+}
