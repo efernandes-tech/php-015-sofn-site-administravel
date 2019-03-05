@@ -12,3 +12,7 @@
     https://sciactive.com/pnotify/
 - Icones.
     https://fontawesome.com/
+- Deploy:
+    heroku login
+    heroku git:remote -a php-015-sofn-site-admin
+    git push heroku master
