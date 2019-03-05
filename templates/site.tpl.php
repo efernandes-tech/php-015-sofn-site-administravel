@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-    <h1>Bem-vindo!</h1>
-    <?php include $content; ?>
+    <header id="header">
+        <h1>Bem vindo</h1>
+    </header>
 
-    <p><small>2019 - todos os direitos reservados.</small></p>
+    <ul id="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/contato">Contato</a></li>
+    </ul>
+
+    <main id="content">
+        <?php include $content; ?>
+    </main>
+
+    <p id="footer"><small><?php echo date('Y') ?> - todos os direitos reservados</small></p>
 </body>
 </html>
